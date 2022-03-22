@@ -8,7 +8,7 @@
  **/
 int print_string(va_list *args)
 {
-        return (p_string(va_arg(*args, char *)));
+	return (p_string(va_arg(*args, char *)));
 }
 
 /**
@@ -18,7 +18,7 @@ int print_string(va_list *args)
  **/
 int print_int(va_list *args)
 {
-        return (p_int(va_arg(*args, int)));
+	return (p_int(va_arg(*args, int)));
 }
 
 /**
@@ -28,5 +28,5 @@ int print_int(va_list *args)
  **/
 int print_char(va_list *args)
 {
-        return (_write(va_arg(*args, int)));
+	return (_write(va_arg(*args, int)));
 }

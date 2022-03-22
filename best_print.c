@@ -3,13 +3,15 @@
 #include <stdlib.h>
 /**
 * best_print - Select case according to letter
-* @s: selector pointer
+* @args: va_list to print
+* @c: character flag
 * Return: NULL or case
 */
 
 int best_print(char c, va_list *args)
 {
 	int i = 0;
+	int len = 0;
 	find_flag flags[] = {
 			{'c', print_char},
 			{'s', print_string},
@@ -17,17 +19,13 @@ int best_print(char c, va_list *args)
 			{'i', print_int},
 			{'\0', NULL}
 	};
-for (i = 0; flags[i].letter != '\0'; i++)
+	while (flags[i].letter)
 	{
-		if (flags[i].letter == c)
-		{
-			return (flags[i].prnt(args));
-		}
+	if (flags[i].letter == c)
+	len = flags[i].prnt(args);
+
+	i++;
 	}
-	if (c == '%')
-	{
-		_write('%');
-		return (1);
-	}
-	return (0);
+
+	return (len);
 }

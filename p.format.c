@@ -19,7 +19,7 @@ int exponent(int x, int y)
 	return (x * exponent(x, y - 1));
 }
 /**
- * p_int - print an int using only _write 
+ * p_int - print an int using only _write
  * @number: int to print
  * Return: chars printed
  **/
