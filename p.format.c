@@ -19,7 +19,7 @@ int exponent(int x, int y)
 	return (x * exponent(x, y - 1));
 }
 /**
- * p_int - print an int using only _write 
+ * p_int - print an int using only _write
  * @number: int to print
  * Return: chars printed
  **/
@@ -75,4 +75,17 @@ int p_string(char *s)
 		_write(s[i]);
 	}
 	return (i);
+}
+/**
+ * buffer - Temporary string to hold all everything to print
+ * @a: character to add to string
+ * @s: pointer to place in current string
+ * Return: On success 1, 0 if string is NULL
+ **/
+int buffer(char a, char *s)
+{
+	if (s == NULL)
+		return (0);
+	s[0] = a;
+	return (1);
 }
