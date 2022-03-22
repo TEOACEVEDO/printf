@@ -14,16 +14,16 @@ int _printf(const char *format, ...)
 
         for (s = 0; format[s] != '\0'; s++)
         {
-                if (format[s] == '%')
-                {
-                        result += best_print(format[s + 1], &args);
-                        s++;
-                }
-                else
-                {
-                        _write(format[s]);
-                        result++;
-                }
+        if (format[s] == '%')
+        {
+        result += best_print(format[s + 1], &args);
+        s++;
+        }
+        else
+        {
+        _write(format[s]);
+        result++;
+        }
         }
         va_end(args);
         return (result);
