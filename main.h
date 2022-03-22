@@ -4,5 +4,6 @@
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
+int best_print(char c, va_list *args);
 
 #endif
