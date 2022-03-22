@@ -2,8 +2,29 @@
 #define FILE_MAIN
 #include <stdlib.h>
 #include <stdarg.h>
+/**
+ * struct flag -flag object
+ * @letter: flag char
+ * @prnt: print function pointer
+ * Descriptions: contains flag letter and corresponding print function
+ **/
+typedef struct flag
+{
+	char letter;
+	int (*prnt)(va_list *);
+}find_flag;
 
 int _printf(const char *format, ...);
 int best_print(char c, va_list *args);
+<<<<<<< HEAD
+=======
+int p_string(char *s);
+int _write(char c);
+int p_int(int number);
+int exponent(int x, int y);
+int print_string(va_list *args);
+int print_int(va_list *args);
+int print_char(va_list *args);
+>>>>>>> 28dda74d042096547a2da9ed5eca6fa2c94cf187
 
 #endif
