@@ -16,6 +16,7 @@ typedef struct flag
 
 int _printf(const char *format, ...);
 int best_print(char c, va_list *args);
+<<<<<<< HEAD
 int p_string(char *s);
 int _write(char c);
 int p_int(int number);
@@ -23,5 +24,7 @@ int exponent(int x, int y);
 int print_string(va_list *args);
 int print_int(va_list *args);
 int print_char(va_list *args);
+=======
+>>>>>>> 08ed7ccdf45e65d8aa8b6a53386a1044014ab688
 
 #endif
