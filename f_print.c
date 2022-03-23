@@ -33,7 +33,7 @@ int print_char(va_list *args)
 
 /**
  * print_bin - makes object into int, print as binary
- * @ap: va_list object
+ * @args: va_list object
  * Return: chars printed
  **/
 int print_bin(va_list *args)
