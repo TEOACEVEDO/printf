@@ -22,9 +22,12 @@ int p_int(int number);
 int exponent(int x, int y);
 int buffer(char a, char *s);
 int p_bin(unsigned int num);
+int p_intu(int number);
+
 int print_string(va_list *args);
 int print_int(va_list *args);
 int print_char(va_list *args);
 int print_bin(va_list *args);
+int print_intu(va_list *args);
 
 #endif

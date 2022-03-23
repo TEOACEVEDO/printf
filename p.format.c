@@ -64,10 +64,47 @@ int p_int(int number)
 }
 
 /**
- * p_bin - convert int to binary and print
- * @num: number to convert
- * Return: number of chars printed
+ * p_intu - print an int using only _write
+ * @number: int to print
+ * Return: chars printed
  **/
+int p_intu(int number)
+{
+	int size, digit, result;
+	long counter, sign;
+
+	sign = 1;
+	digit = 0;
+	size = 1;
+	counter = number;
+	result = 0;
+
+	if (number < 0)
+	{
+		sign = -1;
+		counter *= sign;
+		result++;
+	}
+	for (; counter >= 10; size++)
+        {
+                counter = counter / 10;
+        }
+
+        counter = sign * (long)number;
+
+	while (size >= 2)
+	{
+		digit = (counter / exponent(10, size - 1));
+		_write(digit + '0');
+		counter = counter % exponent(10, size - 1);
+                size--;
+		result++;
+	}
+	_write(counter % 10 + '0');
+        result++;
+	return (result);
+}
+
 int p_bin(unsigned int num)
 {
 	if (num < 2)

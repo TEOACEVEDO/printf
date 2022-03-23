@@ -40,3 +40,13 @@ int print_bin(va_list *args)
 {
 	return (p_bin(va_arg(*args, unsigned int)));
 }
+/**
+ * print_intu - makes object into int
+ * @args: va_list object
+ * Return: digits printed
+ **/
+int print_intu(va_list *args)
+{
+        return (p_intu(va_arg(*args, int)));
+}
+
