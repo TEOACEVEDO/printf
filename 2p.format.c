@@ -17,19 +17,6 @@ int p_string(char *s)
 	}
 	return (i);
 }
-/**
- * buffer - Temporary string to hold all everything to print
- * @a: character to add to string
- * @s: pointer to place in current string
- * Return: On success 1, 0 if string is NULL
- **/
-int buffer(char a, char *s)
-{
-	if (s == NULL)
-		return (0);
-	s[0] = a;
-	return (1);
-}
 
 /**
  * _write - writes the character c to stdout
