@@ -65,7 +65,7 @@ int p_int(int number)
 
 /**
  * p_intu - print an int using only _write
- * @number: int to print
+ * @num: int to print
  * Return: chars printed
  **/
 int p_intu(unsigned int num)
@@ -76,6 +76,11 @@ int p_intu(unsigned int num)
 		return (p_intu(num / 10) + _write(num % 10 + '0'));
 }
 
+/**
+ * p_bin - convert int to binary and print
+ * @num: number to convert
+ * Return: number of chars printed
+ **/
 int p_bin(unsigned int num)
 {
 	if (num < 2)
