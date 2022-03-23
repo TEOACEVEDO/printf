@@ -24,6 +24,19 @@ int p_string(char *s)
  * Return: On success 1
  * On error, -1 is returned, and errno is set appropriately.
  */
+int p_rev(char *s)
+{
+	int len = 0, len2 = 0;
+
+	while (s[len] != '\0')
+	{
+		len++;
+		len2++;
+	}
+	while (len)
+		_putchar(s[--len]);
+	return (len2);
+}
 int _write(char c)
 {
 	return (write(1, &c, 1));
