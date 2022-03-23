@@ -22,8 +22,7 @@ _printf() is written and maintained by Mateo Acevedo Velez and Santiago Osorio O
 
 ###Images
 
-Image:
 
-![](https://i.pinimg.com/originals/9a/43/03/9a4303cfa8557e0754ae86bcc6c6052e.gif)
+![]()
 
 > Flowchart.
