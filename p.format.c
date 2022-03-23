@@ -3,6 +3,45 @@
 #include <stdarg.h>
 #include <stdlib.h>
 /**
+ * p_string - pring string
+ * @s: string to print
+ * Return: nothing
+ **/
+int p_string(char *s)
+{
+	unsigned int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		_write(s[i]);
+	}
+	return (i);
+}
+/**
+ * buffer - Temporary string to hold all everything to print
+ * @a: character to add to string
+ * @s: pointer to place in current string
+ * Return: On success 1, 0 if string is NULL
+ **/
+int buffer(char a, char *s)
+{
+	if (s == NULL)
+		return (0);
+	s[0] = a;
+	return (1);
+}
+
+/**
+ * _write - writes the character c to stdout
+ * @c: the char to print
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _write(char c)
+{
+	return (write(1, &c, 1));
+}
+/**
  * exponent - x to the power of y
  * @x: base number
  * @y: exponent
@@ -18,6 +57,7 @@ int exponent(int x, int y)
 
 	return (x * exponent(x, y - 1));
 }
+
 /**
  * p_int - print an int using only _write
  * @number: int to print
@@ -61,31 +101,16 @@ int p_int(int number)
 	result++;
 	return (result);
 }
-/**
- * p_string - pring string
- * @s: string to print
- * Return: nothing
- **/
-int p_string(char *s)
-{
-	unsigned int i;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		_write(s[i]);
-	}
-	return (i);
-}
 /**
- * buffer - Temporary string to hold all everything to print
- * @a: character to add to string
- * @s: pointer to place in current string
- * Return: On success 1, 0 if string is NULL
+ * p_bin - convert int to binary and print
+ * @num: number to convert
+ * Return: number of chars printed
  **/
-int buffer(char a, char *s)
+int p_bin(unsigned int num)
 {
-	if (s == NULL)
-		return (0);
-	s[0] = a;
-	return (1);
+	if (num < 2)
+		return (_write(num + '0'));
+	else
+		return (p_bin(num / 2) + _write(num % 2 + '0'));
 }
