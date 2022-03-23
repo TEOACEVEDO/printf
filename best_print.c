@@ -17,6 +17,8 @@ int best_print(char c, va_list *args)
 			{'s', print_string},
 			{'d', print_int},
 			{'i', print_int},
+			{'b', print_bin},
+			{'u', print_intu},
 			{'\0', NULL}
 	};
 	while (flags[i].letter)
@@ -26,6 +28,10 @@ int best_print(char c, va_list *args)
 
 	i++;
 	}
-
+	if (c == '%')
+	{
+		_write('%');
+		return (1);
+	}
 	return (len);
 }

@@ -18,6 +18,7 @@ int exponent(int x, int y)
 
 	return (x * exponent(x, y - 1));
 }
+
 /**
  * p_int - print an int using only _write
  * @number: int to print
@@ -61,18 +62,29 @@ int p_int(int number)
 	result++;
 	return (result);
 }
-/**
- * p_string - pring string
- * @s: string to print
- * Return: nothing
- **/
-int p_string(char *s)
-{
-	unsigned int i;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		_write(s[i]);
-	}
-	return (i);
+/**
+ * p_intu - print an int using only _write
+ * @num: int to print
+ * Return: chars printed
+ **/
+int p_intu(unsigned int num)
+{
+	if (num <= 9)
+		return (_write(num + '0'));
+	else
+		return (p_intu(num / 10) + _write(num % 10 + '0'));
+}
+
+/**
+ * p_bin - convert int to binary and print
+ * @num: number to convert
+ * Return: number of chars printed
+ **/
+int p_bin(unsigned int num)
+{
+	if (num < 2)
+		return (_write(num + '0'));
+	else
+		return (p_bin(num / 2) + _write(num % 2 + '0'));
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ## The Best Printf  
+=======
+## The Best Printf
+>>>>>>> faa449258c6863557508790be8d78ae096c8482e
 
 - Objective: Recreate the C library printf
 
@@ -25,6 +29,12 @@ _printf() is written and maintained by Mateo Acevedo Velez and Santiago Osorio O
 
 Image:
 
+<<<<<<< HEAD
 ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
 
 > Flowchart
+=======
+![](https://i.pinimg.com/originals/9a/43/03/9a4303cfa8557e0754ae86bcc6c6052e.gif)
+
+> Flowchart.
+>>>>>>> faa449258c6863557508790be8d78ae096c8482e

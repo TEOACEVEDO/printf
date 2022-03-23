@@ -20,8 +20,15 @@ int p_string(char *s);
 int _write(char c);
 int p_int(int number);
 int exponent(int x, int y);
+int buffer(char a, char *s);
+int p_bin(unsigned int num);
+int p_intu(unsigned int number);
+int p_rev(char *s);
+
 int print_string(va_list *args);
 int print_int(va_list *args);
 int print_char(va_list *args);
+int print_bin(va_list *args);
+int print_intu(va_list *args);
 
 #endif
