@@ -22,7 +22,7 @@ int p_int(int number);
 int exponent(int x, int y);
 int buffer(char a, char *s);
 int p_bin(unsigned int num);
-int p_intu(int number);
+int p_intu(unsigned int number);
 int p_rev(char *s);
 
 int print_string(va_list *args);

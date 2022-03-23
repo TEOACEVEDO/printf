@@ -26,17 +26,12 @@ int p_string(char *s)
  */
 int p_rev(char *s)
 {
-	int len = 0, len2 = 0;
+	if (s[1] == '\0')
+		return (_write(s[0]));
 
-	while (s[len] != '\0')
-	{
-		len++;
-		len2++;
-	}
-	while (len)
-		_putchar(s[--len]);
-	return (len2);
+	return (p_rev(&s[1]) + _write(s[0]));
 }
+
 int _write(char c)
 {
 	return (write(1, &c, 1));

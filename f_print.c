@@ -47,6 +47,6 @@ int print_bin(va_list *args)
  **/
 int print_intu(va_list *args)
 {
-        return (p_intu(va_arg(*args, int)));
+        return (p_intu(va_arg(*args, unsigned int)));
 }
 
