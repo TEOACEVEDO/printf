@@ -17,6 +17,19 @@ int p_string(char *s)
 	}
 	return (i);
 }
+int p_rstr(char *s)
+{
+	int len = 0, len2 = 0;
+
+	while (s[len] != '\0')
+	{
+		len++;
+		len2++;
+	}
+	while (len)
+		_putchar(s[--len]);
+	return (len2);
+}
 
 /**
  * _write - writes the character c to stdout
