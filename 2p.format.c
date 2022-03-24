@@ -17,18 +17,17 @@ int p_string(char *s)
 	}
 	return (i);
 }
+/**
+ * p_rstr - print string in reverse
+ * @s: string to reverse
+ * Return: size of string
+ **/
 int p_rstr(char *s)
 {
-	int len = 0, len2 = 0;
+    if (s[1] == '\0')
+        return (_write(s[0]));
 
-	while (s[len] != '\0')
-	{
-		len++;
-		len2++;
-	}
-	while (len)
-		_putchar(s[--len]);
-	return (len2);
+    return (p_rstr(&s[1]) + _write(s[0]));
 }
 
 /**
