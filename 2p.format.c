@@ -10,26 +10,16 @@
 int p_string(char *s)
 {
 	unsigned int i;
-
+	
+	if (s == NULL)
+		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		_write(s[i]);
 	}
 	return (i);
 }
-/**
- * buffer - Temporary string to hold all everything to print
- * @a: character to add to string
- * @s: pointer to place in current string
- * Return: On success 1, 0 if string is NULL
- **/
-int buffer(char a, char *s)
-{
-	if (s == NULL)
-		return (0);
-	s[0] = a;
-	return (1);
-}
+
 /**
  * _write - writes the character c to stdout
  * @c: the char to print
