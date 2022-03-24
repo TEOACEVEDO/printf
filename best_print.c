@@ -33,10 +33,5 @@ int best_print(char c, va_list *args)
 		_write('%');
 		return (1);
 	}
-	if (c == " %")
-	{
-		_write("%");
-		return (0);
-	}
 	return (len);
 }
