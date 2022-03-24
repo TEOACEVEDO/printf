@@ -8,5 +8,5 @@
  **/
 int print_rstr(va_list *args)
 {
-    return (p_rstr(va_arg(*args, char *)));
+	return (p_rstr(va_arg(*args, char *)));
 }
