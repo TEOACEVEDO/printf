@@ -11,6 +11,9 @@ int p_string(char *s)
 {
 	unsigned int i;
 
+	if (s == NULL)
+		s = "(null)";
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		_write(s[i]);
