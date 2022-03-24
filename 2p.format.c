@@ -19,15 +19,24 @@ int p_string(char *s)
 }
 /**
  * p_rstr - print string in reverse
- * @s: string to reverse
+ * @r: string to reverse
  * Return: size of string
  **/
-int p_rstr(char *s)
+int p_rstr(va_list r)
 {
-	if (s[1] == '\0')
-		return (_write(s[0]));
-	else
-		return (p_rstr(&s[1]) + _write(s[0]));
+	int len = 0, len2 = 0;
+	char *s;
+
+	s = va_arg(r, char *);
+
+	while (s[len] != '\0')
+	{
+		len++;
+		len2++;
+	}
+	while (len)
+		_write(s[--len]);
+	return (len2);
 }
 
 /**
