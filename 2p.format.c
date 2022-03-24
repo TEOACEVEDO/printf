@@ -25,8 +25,8 @@ int p_string(char *s)
 int p_rstr(char *s)
 	if (s[1] == '\0')
 		return (_write(s[0]));
-	else
-		return (p_rstr(&s[1]) + _write(s[0]));
+
+	return (p_rstr(&s[1]) + _write(s[0]));
 
 /**
  * _write - writes the character c to stdout
