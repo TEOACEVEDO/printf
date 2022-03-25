@@ -19,7 +19,7 @@ int best_print(char c, va_list *args)
 			{'i', print_int},
 			{'b', print_bin},
 			{'u', print_intu},
-			{'NULL', NULL}
+			{NULL, NULL}
 	};
 	while (flags[i].letter)
 	{
