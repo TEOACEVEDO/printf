@@ -29,9 +29,9 @@ int best_print(char c, va_list *args)
 	i++;
 	}
 	if (c == '%')
-        {
-                _write('%');
-                return (1);
-        }
+	{
+		_write('%');
+		return (1);
+	}
 	return (len);
 }
