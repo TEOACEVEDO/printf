@@ -25,7 +25,7 @@ Upon successful return, the _printf() function return the number of characters p
 
 
 ### Author
-_printf() is written and maintained by Mateo Acevedo Velez and Santiago Osorio Osorio
+_printf() is written and maintained by Mateo Acevedo Velez and Santiago Osorno Osorno
 
 
 # Repo Printf 1 link [Repo ](https://github.com/TEOACEVEDO/printf)
